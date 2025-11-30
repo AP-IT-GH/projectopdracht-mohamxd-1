@@ -1,0 +1,97 @@
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.topbar, .footer {
+  background: #111;
+  padding: 6px 14px;
+  text-align: right;
+  color: #aaa;
+}
+
+.lang a { color: #c0a97a; margin-left: 10px; text-decoration: none; }
+
+.mainnav { background: #1a1a1a; }
+
+.nav-inner {
+  max-width: 1200px; margin: auto; padding: 12px 16px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+
+.left, .right { display: flex; gap: 12px; }
+
+.nav-link {
+  color: #fff; text-decoration: none;
+}
+.nav-link:hover, .nav-link.active {
+  color: #c0a97a; text-decoration: underline;
+}
+
+.logo { font-weight: 700; letter-spacing: 2px; }
+
+.footer { text-align: center; padding: 14px; }
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-section {
+  max-width: 1200px; margin: 40px auto; padding: 0 20px;
+}
+
+.contact-title {
+  font-size: 38px; font-weight: 700; color: #c0a97a; margin-bottom: 10px;
+}
+
+.contact-text {
+  color: #ccc; line-height: 1.6; margin-bottom: 40px;
+}
+
+.contact-box {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+
+.contact-left { width: 35%; }
+.left-title { font-size: 24px; margin-bottom: 16px; }
+.socials a { color: #c0a97a; margin-right: 12px; }
+
+
+.divider { width: 1px; background: #333; }
+
+
+.contact-right {
+  width: 65%; display: flex; flex-direction: column; gap: 16px;
+}
+
+.two { display: flex; gap: 16px; }
+
+.field { display: flex; flex-direction: column; }
+
+.field label { margin-bottom: 6px; font-size: 14px; }
+
+.field input,
+.field select,
+.field textarea {
+  background: #0e0e0e; border: 1px solid #333;
+  padding: 10px; border-radius: 8px; color: #fff;
+}
+
+textarea { height: 120px; resize: none; }
+
+
+.send-btn {
+  width: 140px; padding: 10px;
+  background: #c0a97a; border: none; color: #000;
+  font-weight: 700; border-radius: 8px; cursor: pointer;
+}
+.send-btn:hover { background: #e6d2a2; }
