@@ -1,8 +1,4 @@
-
-
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -11,11 +7,20 @@ body {
   color: #fff;
 }
 
-
 .topbar {
   background: #111;
   padding: 6px 14px;
   text-align: right;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 .lang a {
@@ -24,10 +29,7 @@ body {
   margin-left: 10px;
 }
 
-
-.mainnav {
-  background: #1a1a1a;
-}
+.mainnav { background: #1a1a1a; }
 
 .nav-inner {
   max-width: 1200px;
@@ -40,8 +42,7 @@ body {
   gap: 12px;
 }
 
-.left,
-.right {
+.left, .right {
   display: flex;
   gap: 12px;
 }
@@ -57,14 +58,54 @@ body {
   text-decoration: underline;
 }
 
-/* ===== CARS LAYOUT (naast elkaar!) ===== */
-.Cars {
+/* ===== SHOP LAYOUT (Cars + Aside) ===== */
+.shop{
   max-width: 1300px;
   margin: 40px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Override jouw oude section sizing */
+.shop .Cars{
+  max-width: none;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+
+@media (min-width: 1000px){
+  .shop{ grid-template-columns: 1fr 340px; align-items: start; }
+  .side{ position: sticky; top: 20px; }
+}
+
+.side .box{
+  background:#1a1a1a;
+  padding:16px;
+  border-radius:12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+  margin-bottom: 16px;
+}
+
+.mini-list{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.total{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display:flex;
+  justify-content: space-between;
+  color: #c0a97a;
+  font-weight: 700;
 }
 
 /* ===== INDIVIDUELE CARDS ===== */
@@ -90,24 +131,83 @@ body {
   font-size: 22px;
 }
 
-.car ul {
-  list-style: none;
-  padding: 0;
+.car ul { list-style: none; padding: 0; }
+.car li { margin: 6px 0; }
+
+/* Buttons in cards */
+.actions{
+  display:flex;
+  gap: 10px;
+  margin-top: 12px;
 }
 
-.car li {
-  margin: 6px 0;
+.btn{
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #2a2a2a;
+  color: #fff;
 }
 
+.btn:hover{ opacity: .9; }
+
+.wish{
+  width: 44px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 18px;
+}
+
+.wish.active{
+  color: #c0a97a;
+}
+
+/* Cart/Wishlist items */
+.item{
+  display:flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  position: relative;
+}
+
+.item img{
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item .meta{ flex:1; }
+.item .name{ font-weight: 700; font-size: 14px; }
+.item .sub{ opacity: .8; font-size: 13px; margin-top: 2px; }
+
+.remove{
+  opacity: 0;
+  pointer-events: none;
+  position:absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.item:hover .remove{
+  opacity: 1;
+  pointer-events: auto;
+}
 
 @media (max-width: 640px) {
-  .car {
-    width: 95%;
-  }
-
-  .car img {
-    height: 220px;
-  }
+  .car { width: 95%; }
+  .car img { height: 220px; }
 }
 
 .footer {
@@ -115,4 +215,75 @@ body {
   color: #aaa;
   text-align: center;
   padding: 14px;
+}
+/* ===== DETAIL PAGE ===== */
+.car-detail{
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.back-link{
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #c0a97a;
+  text-decoration: none;
+}
+
+.back-link:hover{
+  text-decoration: underline;
+}
+
+.detail-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.detail-img{
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+figure{ margin: 0; }
+figcaption{
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: .75;
+}
+
+.detail-info h1{
+  margin: 0 0 8px;
+  color: #a4855b;
+}
+
+.subtitle{
+  margin: 0 0 18px;
+  opacity: .85;
+}
+
+.specs{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.specs li{
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+}
+
+@media (min-width: 900px){
+  .detail-grid{
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .detail-img{
+    height: 520px;
+  }
 }

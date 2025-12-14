@@ -7,10 +7,11 @@
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/stock.css">
-
+  
 </head>
-
+ <script src="./js/cart.js" defer></script>
 <body>
+  <body>
   <div class="topbar">
     <nav class="lang">
       <a href="#">NL</a>
@@ -18,13 +19,12 @@
       <a href="#">EN</a>
     </nav>
   </div>
+
   <header class="mainnav">
     <div class="nav-inner">
       <nav class="left">
         <a class="nav-link" href="./index.html">HOME</a>
         <a class="nav-link active" href="./stock.html">STOCK</a>
-      </nav>
-
       </nav>
 
       <div class="logo">SOULDRIVEN</div>
@@ -33,91 +33,193 @@
         <a class="nav-link" href="./services.html">SERVICES</a>
         <a class="nav-link" href="./contact.html">CONTACT</a>
       </nav>
-      </nav>
     </div>
   </header>
-  
+
+  <main class="shop">
     <section class="Cars">
-      <div class="car">
-      <img src="./assets/image/imggullwing.jpg" alt="Mercedes-Benz 300SL Gullwing">
-      <h2>Mercedes-Benz 300SL Gullwing</h2>
-      <p>Een van de meest zeldzame en begeerde Britse sportwagens ooit gebouwd. De DB4 GT Zagato combineert Italiaans design met Engelse perfectie krachtig, elegant en puurakmanschap</p>
-      <ul>
-        <li>Motor: 3.7L Straight-6</li>
-        <li>Vermogen: 314 pk</li>
-        <li>Topsnelheid: 245 km/u</li>
-        <li>Prijs: €2.900.000</li>
-        <li>Status: Beschikbaar</li>
-      </ul>
 
-      </div>
-      
-       <div class="car">
-      <img src="./assets/image/imgF40.jpg" alt="Ferrari F40 1987">
-    <h2>Ferrari F40 1987</h2>
-    <p>De F40 is luxe en kracht in zijn puurste vorm het laatste meesterwerk dat Enzo Ferrari zelf goedkeurde.
-      Gebouwd voor Ferrari’s 40ste jubileum: licht, snel en legendarisch exclusief.
-      Een icoon waar passie, prestige en ziel samenkomen.</p>
-    <ul>
-      <li>Motor: 3.7L Straight-6</li>
-      <li>Vermogen: 478 pk</li>
-      <li>Topsnelheid: 324 km/u</li>
-      <li>Prijs: €2.00.000</li>
-      <li>Status: Beschikbaar</li>
-    </ul>
+      <!-- 1) Mercedes -->
+      <a class="car-link" href="../project-opdracht/cars/mercedes-300sl.html">
+        <div class="car">
+          <img src="./assets/image/imggullwing.jpg" alt="Mercedes-Benz 300SL Gullwing">
+          <h2>Mercedes-Benz 300SL Gullwing</h2>
+          <p>Een iconische classic met legendarische vleugeldeuren. Tijdloos design, pure klasse en echte beleving.</p>
+          <ul>
+            <li>Motor: 3.0L Straight-6</li>
+            <li>Vermogen: 215 pk</li>
+            <li>Topsnelheid: 260 km/u</li>
+            <li>Prijs: €2.900.000</li>
+            <li>Status: Beschikbaar</li>
+          </ul>
 
-    </div>
-     <div class="car">
-      <img src="./assets/image/aston_martin.jpg" alt="Aston Martin DB4 GT Zagato (1960)">
-    <h2>Aston Martin DB4 GT Zagato (1960)</h2>
-    <p>Een van de meest zeldzame en begeerde Britse sportwagens ooit gebouwd.
-        De DB4 GT Zagato combineert Italiaans design met Engelse perfectie
-        krachtig, elegant en puur vakmanschap.</p>
-    <ul>
-      <li>Motor: 3.0L Straight-6</li>
-      <li>Vermogen: 215 pk</li>
-      <li>Topsnelheid: 260 km/u</li>
-      <li>Prijs: €2.900.000</li>
-      <li>Status: Beschikbaar</li>
-    </ul>
-    </div>
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="mercedes-300sl"
+              data-name="Mercedes-Benz 300SL Gullwing"
+              data-price="2900000"
+              data-img="./assets/image/imggullwing.jpg">
+              Add to cart
+            </button>
 
-    </div>
-     <div class="car">
-      <img src="./assets/image/1967_Alfa_Romeo_33_Stradale_Prototype_ARM_Low (1).jpg" alt="Aston Martin DB4 GT Zagato (1960)">
-    <h2>Alfa Romeo 33 Stradale (1967)</h2>
-    <p>De 33 Stradale is een kunstwerk op wielen. Slechts 18 gebouwd.
-       Perfecte balans tussen Italiaans design, motortechniek en zeldzame schoonheid.</p>
-    <ul>
-      <li>Motor:2.0L V8</li>
-      <li>Vermogen: 230 pk</li>
-      <li>Topsnelheid: 260km/u</li>
-      <li>Prijs: €10.000.000</li>
-      <li>Status: Beschikbaar</li>
-    </ul>
-    </div>
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="mercedes-300sl"
+              data-name="Mercedes-Benz 300SL Gullwing"
+              data-price="2900000"
+              data-img="./assets/image/imggullwing.jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
 
-     <div class="car">
-      <img src="./assets/image/porsche turbo.jpg" alt="6. Porsche 911 (930) Turbo — 1975–1989">
-    <h2> Porsche 911 (930) Turbo — 1975–1989</h2>
-    <p>De Porsche 911 (930) Turbo is een iconische klassieker uit de jaren 70 en 80. De beroemde “whale tail”,
-       brute turbo power en pure analoge rijbeleving maken dit model tot een van de meest geliefde 911’s ooit.</p>
-    <ul>
-      <li>Motor: 3.3L Turbo Flat-6</li>
-      <li>Vermogen: 300pk</li>
-      <li>Topsnelheid: 260 km/u</li>
-      <li>Prijs: €230.000</li>
-      <li>Status: Beschikbaar</li>
-    </ul>
-    </div>
-    
-      <article>
-        <a  target="_blank">
-          <div class="car">
-            <img src="./assets/image/Jaguar_E-Type.jpg" alt="Jaguar E-Type Series 1 (1961)">
+      <!-- 2) Ferrari -->
+      <a class="car-link" href="../project-opdracht/cars/ferrari-f40.html">
+        <div class="car">
+          <img src="./assets/image/imgF40.jpg" alt="Ferrari F40 1987">
+          <h2>Ferrari F40 1987</h2>
+          <p>De F40 is luxe en kracht in zijn puurste vorm — het laatste meesterwerk dat Enzo Ferrari zelf goedkeurde.</p>
+          <ul>
+            <li>Motor: 2.9L Twin-Turbo V8</li>
+            <li>Vermogen: 478 pk</li>
+            <li>Topsnelheid: 324 km/u</li>
+            <li>Prijs: €2.000.000</li>
+            <li>Status: Beschikbaar</li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="ferrari-f40"
+              data-name="Ferrari F40 1987"
+              data-price="2000000"
+              data-img="./assets/image/imgF40.jpg">
+              Add to cart
+            </button>
+
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="ferrari-f40"
+              data-name="Ferrari F40 1987"
+              data-price="2000000"
+              data-img="./assets/image/imgF40.jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- 3) Aston -->
+      <a class="car-link" href="../project-opdracht/cars/aston-db4-gt-zagato.html">
+        <div class="car">
+          <img src="./assets/image/aston_martin.jpg" alt="Aston Martin DB4 GT Zagato (1960)">
+          <h2>Aston Martin DB4 GT Zagato (1960)</h2>
+          <p>Een van de meest zeldzame en begeerde Britse sportwagens ooit gebouwd. Italiaans design + Engelse perfectie.</p>
+          <ul>
+            <li>Motor: 3.7L Straight-6</li>
+            <li>Vermogen: 314 pk</li>
+            <li>Topsnelheid: 245 km/u</li>
+            <li>Prijs: €2.900.000</li>
+            <li>Status: Beschikbaar</li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="aston-db4-zagato"
+              data-name="Aston Martin DB4 GT Zagato (1960)"
+              data-price="2900000"
+              data-img="./assets/image/aston_martin.jpg">
+              Add to cart
+            </button>
+
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="aston-db4-zagato"
+              data-name="Aston Martin DB4 GT Zagato (1960)"
+              data-price="2900000"
+              data-img="./assets/image/aston_martin.jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4) Alfa -->
+      <a class="car-link" href="../project-opdracht/cars/alfa-33-stradale.html">
+        <div class="car">
+          <img src="./assets/image/1967_Alfa_Romeo_33_Stradale_Prototype_ARM_Low (1).jpg" alt="Alfa Romeo 33 Stradale (1967)">
+          <h2>Alfa Romeo 33 Stradale (1967)</h2>
+          <p>De 33 Stradale is een kunstwerk op wielen. Slechts 18 gebouwd. Zeldzaam, puur en tijdloos.</p>
+          <ul>
+            <li>Motor: 2.0L V8</li>
+            <li>Vermogen: 230 pk</li>
+            <li>Topsnelheid: 260 km/u</li>
+            <li>Prijs: €10.000.000</li>
+            <li>Status: Beschikbaar</li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="alfa-33-stradale"
+              data-name="Alfa Romeo 33 Stradale (1967)"
+              data-price="10000000"
+              data-img="./assets/image/1967_Alfa_Romeo_33_Stradale_Prototype_ARM_Low (1).jpg">
+              Add to cart
+            </button>
+
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="alfa-33-stradale"
+              data-name="Alfa Romeo 33 Stradale (1967)"
+              data-price="10000000"
+              data-img="./assets/image/1967_Alfa_Romeo_33_Stradale_Prototype_ARM_Low (1).jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- 5) Porsche -->
+      <a class="car-link" href="../project-opdracht/cars/porsche-930-turbo.html">
+        <div class="car">
+          <img src="./assets/image/porsche turbo.jpg" alt="Porsche 911 (930) Turbo — 1975–1989">
+          <h2>Porsche 911 (930) Turbo — 1975–1989</h2>
+          <p>De iconische “whale tail”, brute turbo power en pure analoge rijbeleving. Een legende.</p>
+          <ul>
+            <li>Motor: 3.3L Turbo Flat-6</li>
+            <li>Vermogen: 300 pk</li>
+            <li>Topsnelheid: 260 km/u</li>
+            <li>Prijs: €230.000</li>
+            <li>Status: Beschikbaar</li>
+          </ul>
+
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="porsche-930-turbo"
+              data-name="Porsche 911 (930) Turbo"
+              data-price="230000"
+              data-img="./assets/image/porsche turbo.jpg">
+              Add to cart
+            </button>
+
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="porsche-930-turbo"
+              data-name="Porsche 911 (930) Turbo"
+              data-price="230000"
+              data-img="./assets/image/porsche turbo.jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- 6) Jaguar -->
+      <a class="car-link" href="../project-opdracht/cars/jaguar-e-type.html">
+        <div class="car">
+          <img src="./assets/image/Jaguar_E-Type.jpg" alt="Jaguar E-Type Series 1 (1961)">
           <h2>Jaguar E-Type Series 1 (1961)</h2>
-          <p>Door Enzo Ferrari zelf “de mooiste auto ooit gemaakt” genoemd.De E-Type combineert elegantie,
-            snelheid en iconisch Brits vakmanschap</p>
+          <p>Door Enzo Ferrari “de mooiste auto ooit gemaakt” genoemd. Elegant, snel en iconisch.</p>
           <ul>
             <li>Motor: 3.8L Straight-6</li>
             <li>Vermogen: 265 pk</li>
@@ -125,13 +227,53 @@
             <li>Prijs: €450.000</li>
             <li>Status: Beschikbaar</li>
           </ul>
-        </a>
-      </article>
+
+          <div class="actions">
+            <button class="btn add-cart"
+              data-id="jaguar-e-type"
+              data-name="Jaguar E-Type Series 1 (1961)"
+              data-price="450000"
+              data-img="./assets/image/Jaguar_E-Type.jpg">
+              Add to cart
+            </button>
+
+            <button class="btn wish"
+              aria-pressed="false"
+              data-id="jaguar-e-type"
+              data-name="Jaguar E-Type Series 1 (1961)"
+              data-price="450000"
+              data-img="./assets/image/Jaguar_E-Type.jpg">
+              ♥
+            </button>
+          </div>
+        </div>
+      </a>
+
     </section>
-  
+
+    <aside class="side">
+      <div class="box">
+        <h3>Wishlist</h3>
+        <div id="wishlistList" class="mini-list"></div>
+        <div class="total">Totaal: <span id="wishlistTotal">€0,00</span></div>
+      </div>
+
+      <div class="box">
+        <h3>Winkelmandje</h3>
+        <div id="cartList" class="mini-list"></div>
+        <div class="total">Totaal: <span id="cartTotal">€0,00</span></div>
+      </div>
+    </aside>
+  </main>
+
   <footer class="footer">
     © 2025 SoulDriven Classic Cars with Souls
   </footer>
+
+  <script src="./js/cart.js" defer></script>
+</body>
+
+  <script src="./assets/js/cart.js" defer></script>
 </body>
 
 </html>
